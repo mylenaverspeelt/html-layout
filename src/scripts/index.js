@@ -7,14 +7,20 @@ function sendUsername() {
 
     const okButton = document.getElementById('ok-button')
 
-    if (newUser) {
+    if (newUser && newUser.length > 0) {
         usernameInput.style.display = 'none'
         okButton.style.display = 'none'
     }
+    else {
+        alert('Por favor, informe o seu nome')
+    }
+
+
 }
 
 let dayTasks = []
 
+let nightTasks = []
 
 function addDayTask() {
 
@@ -38,13 +44,9 @@ function addDayTask() {
     }
 
     dayTasks.push(newTask)
-
     inputNewTask.value = '';
-
     showDayTasks()
-
 }
-
 
 function showDayTasks() {
 
@@ -56,9 +58,42 @@ function showDayTasks() {
         newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt"></i>`;
         ordenedList.appendChild(newListItem);
     });
-
 }
 
-function addNightList() {
+function addNightTask() {
 
+    const inputNewTask = document.getElementById('new-night-task')
+
+    if (inputNewTask.value === '') {
+        alert('Por favor, informe qual a tarefa');
+        return;
+    }
+
+    const taskExists = nightTasks.some(task => task.name === inputNewTask.value.trim());
+
+    if (taskExists) {
+        alert('Esta tarefa já existe');
+        return;
+    }
+
+    const newTask = {
+        name: inputNewTask.value.trim(),
+        id: nightTasks.length + 1
+    }
+
+    nightTasks.push(newTask)
+    inputNewTask.value = '';
+    showNightTasks()
 }
+
+
+function showNightTasks() {
+    const ordenedList = document.getElementById('night-list');
+    ordenedList.innerHTML = '';
+
+    return nightTasks.forEach(task => {
+        const newListItem = document.createElement('li');
+        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt"></i>`;
+        ordenedList.appendChild(newListItem);
+    });
+} 

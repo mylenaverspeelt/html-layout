@@ -14,10 +14,10 @@
     <section class="side-menu">
         <img src="../assets/images/user-icon.png" alt="user-icon" class="user-img">
         <h2 id="inputed-username"></h2>
-        <div>
+        <div style="display: flex; align-items: center;">
             <input type="text" name="username" placeholder="Insira o seu nome" class="input-username"
                 id="input-username">
-            <button onclick="sendUsername()" id="ok-button">OK</button>
+            <button onclick="sendUsername()" id="ok-button"><i class="fas fa-plus-circle"></i></button>
         </div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -57,7 +57,7 @@
                 <div class="new-task-container">
                     <input type="text" name="nightTask" id="new-night-task" class="new-task-input"
                         placeholder="Adicione uma nova tarefa">
-                    <button class="add-button"><i class="fas fa-plus-circle"></i></button>
+                    <button class="add-button" onclick="addNightTask()"><i class="fas fa-plus-circle"></i></button>
                 </div>
                 <nav>
                     <ol id="night-list">
