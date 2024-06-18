@@ -54,31 +54,51 @@ a {
     margin: 1rem 0;
 }
 
-
 .menu-table ul {
     list-style: none;
     cursor: pointer;
 }
 
-.menu-table li{
+.menu-table li {
     margin-bottom: 1rem;
 }
 
 .input-username {
-    background-color: var(--medium-green);
+    background-color: var(--ice-blue);
     padding: 1rem;
     font-size: 1rem;
     border: none;
     border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    color: white;
+    color: var(--dark-purple);
     text-align: center;
+    outline: none;
 }
 
 .input-username::placeholder {
-    color: white
+    color: var(--dark-purple);
 }
 
+.input-username:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+#ok-button{
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--ice-blue);
+    cursor: pointer;
+
+}
+
+#ok-button:hover {
+    background-color: var(--blue);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 /* SEÇÃO PRINCIPAL */
 

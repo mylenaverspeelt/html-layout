@@ -13,8 +13,12 @@
 
     <section class="side-menu">
         <img src="../assets/images/user-icon.png" alt="user-icon" class="user-img">
-        <h2>Nome</h2>
-        <input type="text" name="username" placeholder="Insira o seu nome" class="input-username">
+        <h2 id="inputed-username"></h2>
+        <div>
+            <input type="text" name="username" placeholder="Insira o seu nome" class="input-username"
+                id="input-username">
+            <button onclick="sendUsername()" id="ok-button">ok</button>
+        </div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
@@ -93,6 +97,7 @@
         </div>
 
     </section>
+    <script src="./scripts/index.js"></script>
     <script src="https://kit.fontawesome.com/d08d4c5328.js" crossorigin="anonymous"></script>
 </body>
 
