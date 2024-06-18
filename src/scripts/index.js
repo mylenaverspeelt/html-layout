@@ -1,3 +1,7 @@
+let dayTasks = []
+
+let nightTasks = []
+
 function sendUsername() {
     const usernameInput = document.getElementById('input-username')
     const username = usernameInput.value
@@ -18,15 +22,11 @@ function sendUsername() {
 
 }
 
-let dayTasks = []
-
-let nightTasks = []
-
 function addDayTask() {
 
     const inputNewTask = document.getElementById('new-day-task')
 
-    if (inputNewTask.value === '') {
+    if (inputNewTask.value.trim() === '') {
         alert('Por favor, informe qual a tarefa');
         return;
     }
@@ -48,23 +48,11 @@ function addDayTask() {
     showDayTasks()
 }
 
-function showDayTasks() {
-
-    const ordenedList = document.getElementById('day-list');
-    ordenedList.innerHTML = '';
-
-    return dayTasks.forEach(task => {
-        const newListItem = document.createElement('li');
-        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt"></i>`;
-        ordenedList.appendChild(newListItem);
-    });
-}
-
 function addNightTask() {
 
     const inputNewTask = document.getElementById('new-night-task')
 
-    if (inputNewTask.value === '') {
+    if (inputNewTask.value.trim() === '') {
         alert('Por favor, informe qual a tarefa');
         return;
     }
@@ -86,6 +74,17 @@ function addNightTask() {
     showNightTasks()
 }
 
+function showDayTasks() {
+
+    const ordenedList = document.getElementById('day-list');
+    ordenedList.innerHTML = '';
+
+    return dayTasks.forEach(task => {
+        const newListItem = document.createElement('li');
+        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt" onclick="deleteDayTask(${task.id})"></i>`;
+        ordenedList.appendChild(newListItem);
+    });
+}
 
 function showNightTasks() {
     const ordenedList = document.getElementById('night-list');
@@ -93,7 +92,25 @@ function showNightTasks() {
 
     return nightTasks.forEach(task => {
         const newListItem = document.createElement('li');
-        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt"></i>`;
+        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt" onclick="deleteNightTask(${task.id})"></i>`;
         ordenedList.appendChild(newListItem);
     });
-} 
+}
+
+function deleteDayTask(id) {
+    const index = dayTasks.findIndex(task => task.id === id);
+    if (index !== -1) {
+        dayTasks.splice(index, 1);
+        showDayTasks();
+    }
+}
+
+function deleteNightTask(id) {
+    const index = nightTasks.findIndex(task => task.id === id);
+    if (index !== -1) {
+        nightTasks.splice(index, 1);
+        showNightTasks();
+    }
+}
+
+
