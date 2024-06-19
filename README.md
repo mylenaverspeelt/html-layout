@@ -18,29 +18,34 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 - JavaScript
 
 ### Estrutura do Projeto
-- src/index.html: Página principal da aplicação.
-- src/styles/: Diretório contendo o arquivo CSS principal e variáveis.
-- src/scripts/: Diretório contendo o arquivo JavaScript para funcionalidades da aplicação.
-- src/assets/images: Diretório contendo imagens utilizadas na aplicação
+.
+├── index.html
+├── README.md
+├── styles
+│   └── index.css
+│   └── variables.css
+├── script
+│   └── index.js
+└── assets
+    └── images
+        └── user.png
+
 
 ### Download do Projeto
 
-1. Clonar o Repositório
-Abra o terminal e clone o repositório:
+1. Abra o terminal e clone o repositório:
 
 ```
 git clone https://github.com/mylenaverspeelt/html-layout.git
 ```
 
-2. Navegar até o Diretório do Projeto
-Entre no diretório do projeto:
+2. Navegar até o diretório do projeto:
 
 ```
 cd html-layout
 ```
 
-3. Abrir o Projeto no VSCode
-Abra o projeto no VSCode:
+3. Abra o projeto no VSCode:
 
 ```
 code . 
@@ -51,7 +56,5 @@ Se ainda não tiver, instale a extensão Live Server no VSCode:
 - Abra o VSCode.
 - Vá para Extensões (Ctrl+Shift+X).
 - Pesquise por "Live Server" e instale a extensão
-
-5. Iniciar o Live Server
-Abra o arquivo index.html no VSCode, clique com o botão direito e selecione "Open with Live Server". O projeto abrirá no seu navegador padrão.
+- Abra o arquivo index.html no VSCode, clique com o botão direito e selecione "Open with Live Server". O projeto abrirá no seu navegador padrão.
 
