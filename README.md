@@ -2,6 +2,8 @@
 
 Este projeto consiste em uma aplicação simples para ajudar na organização de tarefas diurnas e noturnas, permitindo aos usuários adicionar e gerenciar suas atividades ao longo do dia. Ele foi desenvolvido como parte do Processo Seletivo da Aceleradora Ágil no qual tive a oportunidade de demonstrar minhas habilidades em HTML, CSS e Vanilla JavaScript.
 
+- A aplicação está hospedada na Vercel e pode ser acessada através do seguinte link: https://html-layout.vercel.app/ 
+
 ### Funcionalidades
 - Adição de Tarefas: Permite adicionar novas tarefas tanto para o período diurno quanto noturno.
 - Exclusão de Tarefas: Permite excluir tarefas da lista
@@ -20,3 +22,5 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 - src/styles/: Diretório contendo o arquivo CSS principal e variáveis.
 - src/scripts/: Diretório contendo o arquivo JavaScript para funcionalidades da aplicação.
 - src/assets/images: Diretório contendo imagens utilizadas na aplicação
+
+### Download do Proketo

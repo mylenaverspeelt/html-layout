@@ -20,89 +20,91 @@ html, body {
     background-color: #f0f0f0;
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
     background-size: 50px 50px;
+    font-size: var(--font-size-base);
+}
 
-    a {
-        text-decoration: none;
-        color: var(--black);
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 769px) {
+
+    .side-menu {
+        width: 20%;
+        background-color: var(--super-light-gray);
     }
 
-    /* MEDIA QUERIES */
-
-    @media (min-width: 769px) {
-
-        .side-menu {
-            width: 20%;
-            background-color: var(--super-light-gray);
-
-        }
-
-        .main-section {
-            width: 80%;
-        }
-
-        .table-container {
-            padding: 2rem;
-        }
-
-        .day, .night {
-            padding: 2rem 3rem;
-
-        }
+    .user-img {
+        height: 10rem;
+        width: 10rem;
     }
 
-    @media (max-width: 768px) {
+    .main-section {
+        width: 80%;
+    }
 
-        html, body {
-            display: block;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
+    .table-container {
+        padding: 2rem;
+    }
 
-        .side-menu {
-            width: 100vw;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            height: 100vh;
-        }
+    .day, .night {
+        padding: 2rem 3rem;
+    }
+}
 
-        .main-section {
-            width: 100vw;
-            margin-top: 4rem;
-        }
 
-        .side-menu p {
-            font-size: 0.9rem;
-            padding: 0.8rem;
-        }
+@media (max-width: 768px) {
 
-        .side-menu h2 {
-            font-size: 1rem;
-        }
+    html, body {
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-        .user-img {
-            height: 5rem;
-            width: 5rem;
-        }
+    .side-menu {
+        width: 100vw;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        height: 100vh;
+    }
 
-        .table-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+    .main-section {
+        width: 100vw;
+        margin-top: 4rem;
+    }
 
-        .menu-links {
-            font-size: 0.8rem;
-            padding: 2rem 0;
-        }
+    .side-menu p {
+        padding: 0.8rem;
+    }
 
-        ::-webkit-scrollbar,
-        ::-webkit-scrollbar-thumb {
-            display: none;
-        }
+    .side-menu h2 {
+        font-size: var(--font-size-h2);
+    }
 
-        h1 {
-            padding: 1rem;
-        }
+    #bio {
+        font-size: var(--font-size-base);
+    }
+
+    .table-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .menu-links {
+        padding: 2rem 0;
+    }
+
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+    h1 {
+        padding: 1rem;
     }
 }
 
@@ -122,8 +124,7 @@ html, body {
 
 .side-menu h2 {
     padding: 1rem 0;
-    font-size: 1.5rem;
-    color: var(--dark-purple);
+    font-size: var(--font-size-h2);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -136,8 +137,8 @@ html, body {
 }
 
 .user-img {
-    height: 10rem;
-    width: 10rem;
+    height: 5rem;
+    width: 5rem;
     margin: 1rem 0;
 }
 
@@ -193,7 +194,7 @@ html, body {
     background-color: var(--white);
     padding: 0.5rem;
     height: 4.2rem;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     outline: none;
     display: flex;
@@ -205,13 +206,9 @@ html, body {
     background-color: white;
     padding: 1rem;
     width: 100%;
-    font-size: 16px;
     border: none;
     outline: none;
-}
-
-.input-element::placeholder {
-    color: var(--dark-purple);
+    font-size: var(--font-size-base);
 }
 
 .add-button {
@@ -234,7 +231,7 @@ html, body {
 }
 
 .main-section h1 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-h1);
     text-align: center;
     color: var(--dark-gray);
     padding-top: 2rem;
@@ -276,7 +273,7 @@ html, body {
 .day h2, .night h2 {
     text-align: center;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
     font-family: "LXGW WenKai TC", cursive;
     color: var(--dark-gray);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -301,7 +298,7 @@ html, body {
     list-style: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     margin: 1rem 0;
-    background-color: var(--super-light-gray);
+    background-color: var(--white);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
