@@ -27,20 +27,27 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 
 1. Clonar o Repositório
 Abra o terminal e clone o repositório:
+
 ```
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/mylenaverspeelt/html-layout.git
+
 ```
 
 2. Navegar até o Diretório do Projeto
 Entre no diretório do projeto:
-```cd meu-projeto
+
+```
+cd html-layout
+
 ```
 
 3. Abrir o Projeto no VSCode
 Abra o projeto no VSCode:
-```code .
-```
 
+```
+code . 
+
+```
 4. Instalar a Extensão Live Server
 Se ainda não tiver, instale a extensão Live Server no VSCode:
 
