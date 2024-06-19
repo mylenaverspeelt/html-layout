@@ -34,7 +34,6 @@ a {
 
     .side-menu {
         width: 20%;
-        background-color: var(--super-light-gray);
     }
 
     .user-img {
@@ -119,7 +118,7 @@ a {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: var(--light-gray);
+    background-color: var(--super-light-gray);
 }
 
 .side-menu h2 {
