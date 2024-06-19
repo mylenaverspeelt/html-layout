@@ -30,7 +30,6 @@ Abra o terminal e clone o repositório:
 
 ```
 git clone https://github.com/mylenaverspeelt/html-layout.git
-
 ```
 
 2. Navegar até o Diretório do Projeto
@@ -38,7 +37,6 @@ Entre no diretório do projeto:
 
 ```
 cd html-layout
-
 ```
 
 3. Abrir o Projeto no VSCode
@@ -46,7 +44,6 @@ Abra o projeto no VSCode:
 
 ```
 code . 
-
 ```
 4. Instalar a Extensão Live Server
 Se ainda não tiver, instale a extensão Live Server no VSCode:
@@ -57,3 +54,4 @@ Se ainda não tiver, instale a extensão Live Server no VSCode:
 
 5. Iniciar o Live Server
 Abra o arquivo index.html no VSCode, clique com o botão direito e selecione "Open with Live Server". O projeto abrirá no seu navegador padrão.
+
