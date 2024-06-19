@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/styles.css">
     <title>Layout</title>
 </head>
 
@@ -14,18 +13,13 @@
     <section class="side-menu">
         <img src="../assets/images/user.png" alt="user-icon" class="user-img">
         <h2 id="inputed-username"></h2>
-        <div class="name-container" id="name-container">
-            <input type="text" name="username" placeholder="Insira o seu nome" class="input-username"
-                id="input-username">
-            <button onclick="sendUsername()" id="ok-button"><i class="fas fa-plus-circle"></i></button>
+        <div class="input-container" id="input-container" style="margin-bottom: 5rem;">
+            <input type="text" name="username" placeholder="Insira o seu nome" class="input-element"
+                id="input-element">
+            <button onclick="sendUsername()" id="add-button" class="add-button"><i class="fas fa-plus-circle"></i></button>
         </div>
-        <p id="user-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <nav class="menu-table">
+        <p id="bio">Te ajudo a organizar suas atividades diurnas e noturnas de maneira simples e eficiente. Adicione suas tarefas e mantenha-se no controle do seu dia. Vamos começar a ser mais produtivos juntos! ✨ </p>
+        <nav class="menu-links">
             <ul>
                 <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
@@ -40,10 +34,10 @@
         <div class="table-container">
             <div class="day">
                 <h2>Dia ☀️</h2>
-                <div class="new-task-container">
-                    <input type="text" name="dayTask" id="new-day-task" class="new-task-input"
-                        placeholder="Adicione uma nova tarefa" maxlength="30">
-                    <button class="add-button" onclick="addDayTask()"><i class="fas fa-plus-circle"></i></button>
+                <div class="input-container">
+                    <input type="text" name="dayTask" id="new-day-task" class="input-element"
+                        placeholder="Adicione uma nova tarefa">
+                    <button onclick="addDayTask()" class="add-button"><i class="fas fa-plus-circle"></i></button>
 
             </div>
             <nav>
@@ -55,10 +49,10 @@
 
         <div class="night">
             <h2>Noite 🌙</h2>
-            <div class="new-task-container">
-                <input type="text" name="nightTask" id="new-night-task" class="new-task-input"
-                    placeholder="Adicione uma nova tarefa" maxlength="30">
-                <button class="add-button" onclick="addNightTask()"><i class="fas fa-plus-circle"></i></button>
+            <div class="input-container">
+                <input type="text" name="nightTask" id="new-night-task" class="input-element"
+                    placeholder="Adicione uma nova tarefa">
+                <button onclick="addNightTask()" class="add-button"><i class="fas fa-plus-circle"></i></button>
             </div>
             <nav>
                 <ol id="night-list">

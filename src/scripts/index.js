@@ -1,32 +1,26 @@
-let dayTasks = []
-
-let nightTasks = []
+let dayTasks = [];
+let nightTasks = [];
 
 function sendUsername() {
-    const usernameInput = document.getElementById('input-username')
-    const username = usernameInput.value
+    const usernameInput = document.getElementById('input-element');
+    const username = usernameInput.value;
 
-    const inputedUsername = document.getElementById('inputed-username')
-    const newUser = inputedUsername.innerText = "Boas vindas, " + username + "!"
+    const inputedUsername = document.getElementById('inputed-username');
+    const newUser = inputedUsername.innerText = "Boas vindas, " + username + "!";
 
-    const userText = document.getElementById('user-text')
-
-    const nameContainer = document.getElementById('name-container')
+    const bio = document.getElementById('bio');
+    const inputContainer = document.getElementById('input-container');
 
     if (newUser && newUser.length > 0) {
-        userText.style.display = 'block'
-        nameContainer.style.display = 'none'
+        bio.style.display = 'block';
+        inputContainer.style.display = 'none';
+    } else {
+        alert('Por favor, informe o seu nome');
     }
-    else {
-        alert('Por favor, informe o seu nome')
-    }
-
-
 }
 
 function addDayTask() {
-
-    const inputNewTask = document.getElementById('new-day-task')
+    const inputNewTask = document.getElementById('new-day-task');
 
     if (inputNewTask.value.trim() === '') {
         alert('Por favor, informe qual a tarefa');
@@ -43,16 +37,15 @@ function addDayTask() {
     const newTask = {
         name: inputNewTask.value.trim(),
         id: dayTasks.length + 1
-    }
+    };
 
-    dayTasks.push(newTask)
+    dayTasks.push(newTask);
     inputNewTask.value = '';
-    showDayTasks()
+    showDayTasks();
 }
 
 function addNightTask() {
-
-    const inputNewTask = document.getElementById('new-night-task')
+    const inputNewTask = document.getElementById('new-night-task');
 
     if (inputNewTask.value.trim() === '') {
         alert('Por favor, informe qual a tarefa');
@@ -69,19 +62,18 @@ function addNightTask() {
     const newTask = {
         name: inputNewTask.value.trim(),
         id: nightTasks.length + 1
-    }
+    };
 
-    nightTasks.push(newTask)
+    nightTasks.push(newTask);
     inputNewTask.value = '';
-    showNightTasks()
+    showNightTasks();
 }
 
 function showDayTasks() {
-
     const ordenedList = document.getElementById('day-list');
     ordenedList.innerHTML = '';
 
-    return dayTasks.forEach(task => {
+    dayTasks.forEach(task => {
         const newListItem = document.createElement('li');
         newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt" onclick="deleteDayTask(${task.id})"></i>`;
         ordenedList.appendChild(newListItem);
@@ -92,7 +84,7 @@ function showNightTasks() {
     const ordenedList = document.getElementById('night-list');
     ordenedList.innerHTML = '';
 
-    return nightTasks.forEach(task => {
+    nightTasks.forEach(task => {
         const newListItem = document.createElement('li');
         newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt" onclick="deleteNightTask(${task.id})"></i>`;
         ordenedList.appendChild(newListItem);
@@ -114,5 +106,3 @@ function deleteNightTask(id) {
         showNightTasks();
     }
 }
-
-
