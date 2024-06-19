@@ -18,6 +18,7 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 - JavaScript
 
 ### Estrutura do Projeto
+```
 .
 ├── index.html
 ├── README.md
@@ -29,7 +30,7 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 └── assets
     └── images
         └── user.png
-
+```
 
 ### Download do Projeto
 
