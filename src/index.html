@@ -12,13 +12,14 @@
 
     <section class="side-menu">
         <img src="../assets/images/user.png" alt="user-icon" class="user-img">
-        <h2 id="inputed-username"></h2>
+        <h2 id="inputed-username">Olá!</h2>
         <div class="input-container" id="input-container" style="margin-bottom: 5rem;">
-            <input type="text" name="username" placeholder="Insira o seu nome" class="input-element"
-                id="input-element">
-            <button onclick="sendUsername()" id="add-button" class="add-button"><i class="fas fa-plus-circle"></i></button>
+            <input type="text" name="username" placeholder="Insira o seu nome" class="input-element" id="input-element">
+            <button onclick="sendUsername()" id="add-button" class="add-button"><i
+                    class="fas fa-plus-circle"></i></button>
         </div>
-        <p id="bio">Te ajudo a organizar suas atividades diurnas e noturnas de maneira simples e eficiente. Adicione suas tarefas e mantenha-se no controle do seu dia. Vamos começar a ser mais produtivos juntos! ✨ </p>
+        <p id="bio">Te ajudo a organizar suas atividades diurnas e noturnas de maneira simples e eficiente. Adicione
+            suas tarefas e mantenha-se no controle do seu dia. Vamos começar a ser mais produtivos juntos! ✨ </p>
         <nav class="menu-links">
             <ul>
                 <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
@@ -33,33 +34,33 @@
         <h1>Lista de tarefas</h1>
         <div class="table-container">
             <div class="day">
-                <h2>Dia ☀️</h2>
+                <h2>Dia 🌞</h2>
                 <div class="input-container">
                     <input type="text" name="dayTask" id="new-day-task" class="input-element"
                         placeholder="Adicione uma nova tarefa">
                     <button onclick="addDayTask()" class="add-button"><i class="fas fa-plus-circle"></i></button>
 
+                </div>
+                <nav>
+                    <ol id="day-list">
+                       
+                    </ol>
+                </nav>
             </div>
-            <nav>
-                <ol id="day-list">
 
-                </ol>
-            </nav>
-        </div>
+            <div class="night">
+                <h2>Noite 🌜</h2>
+                <div class="input-container">
+                    <input type="text" name="nightTask" id="new-night-task" class="input-element"
+                        placeholder="Adicione uma nova tarefa">
+                    <button onclick="addNightTask()" class="add-button"><i class="fas fa-plus-circle"></i></button>
+                </div>
+                <nav>
+                    <ol id="night-list">
 
-        <div class="night">
-            <h2>Noite 🌙</h2>
-            <div class="input-container">
-                <input type="text" name="nightTask" id="new-night-task" class="input-element"
-                    placeholder="Adicione uma nova tarefa">
-                <button onclick="addNightTask()" class="add-button"><i class="fas fa-plus-circle"></i></button>
+                    </ol>
+                </nav>
             </div>
-            <nav>
-                <ol id="night-list">
-
-                </ol>
-            </nav>
-        </div>
         </div>
 
     </section>

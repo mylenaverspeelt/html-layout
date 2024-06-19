@@ -1,4 +1,6 @@
 @import url(./variables.css);
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Playwrite+FR+Moderne:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* ESTILOS GLOBAIS */
 
@@ -9,92 +11,98 @@
 }
 
 html, body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto", sans-serif;
     background: var(--light-gray);
     display: flex;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
+    background-color: #f0f0f0;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
+    background-size: 50px 50px;
 
-a {
-    text-decoration: none;
-    color: var(--black);
-}
-
-/* MEDIA QUERIES */
-
-@media (min-width: 769px) {
-    .side-menu {
-        width: 20%;
+    a {
+        text-decoration: none;
+        color: var(--black);
     }
 
-    .main-section {
-        width: 80%;
+    /* MEDIA QUERIES */
+
+    @media (min-width: 769px) {
+
+        .side-menu {
+            width: 20%;
+            background-color: var(--super-light-gray);
+
+        }
+
+        .main-section {
+            width: 80%;
+        }
+
+        .table-container {
+            padding: 2rem;
+        }
+
+        .day, .night {
+            padding: 2rem 3rem;
+
+        }
     }
 
-    .table-container {
-        padding: 2rem;
-    }
+    @media (max-width: 768px) {
 
-    .day, .night {
-        padding: 2rem 3rem;
+        html, body {
+            display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
 
-    }
-}
+        .side-menu {
+            width: 100vw;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 100vh;
+        }
 
-@media (max-width: 768px) {
+        .main-section {
+            width: 100vw;
+            margin-top: 4rem;
+        }
 
-    html, body {
-        display: block;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
+        .side-menu p {
+            font-size: 0.9rem;
+            padding: 0.8rem;
+        }
 
-    .side-menu {
-        width: 100vw;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        height: 100vh;
-    }
+        .side-menu h2 {
+            font-size: 1rem;
+        }
 
-    .main-section {
-        width: 100vw;
-        margin-top: 4rem;
-    }
+        .user-img {
+            height: 5rem;
+            width: 5rem;
+        }
 
-    .side-menu p {
-        font-size: 0.9rem;
-        padding: 0.8rem;
-    }
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
 
-    .side-menu h2 {
-        font-size: 1rem;
-    }
+        .menu-links {
+            font-size: 0.8rem;
+            padding: 2rem 0;
+        }
 
-    .user-img {
-        height: 5rem;
-        width: 5rem;
-    }
+        ::-webkit-scrollbar,
+        ::-webkit-scrollbar-thumb {
+            display: none;
+        }
 
-    .table-container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .menu-links {
-        font-size: 0.8rem;
-        padding: 2rem 0;
-    }
-
-    ::-webkit-scrollbar,
-    ::-webkit-scrollbar-thumb {
-        display: none;
-    }
-
-    h1 {
-        padding: 1rem;
+        h1 {
+            padding: 1rem;
+        }
     }
 }
 
@@ -105,11 +113,11 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    justify-content: center;
-    background-color: var(--super-light-gray);
+    justify-content: space-around;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-gray);
 }
 
 .side-menu h2 {
@@ -150,6 +158,7 @@ a {
 
 .menu-links {
     width: 100%;
+    text-align: center;
 }
 
 .menu-links ul {
@@ -176,6 +185,7 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
+    font-family: "LXGW WenKai TC", cursive;
 }
 
 .input-container {
@@ -226,18 +236,19 @@ a {
 .main-section h1 {
     font-size: 2.5rem;
     text-align: center;
-    padding-top: 2rem;
     color: var(--dark-gray);
-    background-color: var(--super-light-gray);
+    padding-top: 2rem;
+    font-family: "LXGW WenKai TC", cursive;
+    background-color: var(--light-gray);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .table-container {
     display: flex;
-    background-color: var(--super-light-gray);
+    background-color: var(--light-gray);
     gap: 2rem;
     overflow: hidden;
-    padding: 0.5rem;
+    padding: 2rem;
 }
 
 .day, .night {
@@ -245,6 +256,13 @@ a {
     overflow: hidden;
     padding: 1rem;
     border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day:hover, .night:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .day {
@@ -259,6 +277,7 @@ a {
     text-align: center;
     padding: 1rem;
     font-size: 2rem;
+    font-family: "LXGW WenKai TC", cursive;
     color: var(--dark-gray);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -274,14 +293,24 @@ a {
 }
 
 .day ol li, .night ol li {
+    border-radius: 15px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    border-radius: 15px;
     padding: 1rem;
+    list-style: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     margin: 1rem 0;
     background-color: var(--super-light-gray);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day ol li span,
+.night ol li span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .day ol li:hover,
@@ -293,6 +322,7 @@ a {
 
 .fa-trash-alt {
     margin-left: 1rem;
+    justify-content: end;
 }
 
 .fa-plus-circle {

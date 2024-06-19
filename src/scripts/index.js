@@ -75,7 +75,7 @@ function showDayTasks() {
 
     dayTasks.forEach(task => {
         const newListItem = document.createElement('li');
-        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt" onclick="deleteDayTask(${task.id})"></i>`;
+        newListItem.innerHTML = `<span>${task.name}</span><i class="fas fa-trash-alt" onclick="deleteDayTask(${task.id})"></i>`;
         ordenedList.appendChild(newListItem);
     });
 }
@@ -86,7 +86,7 @@ function showNightTasks() {
 
     nightTasks.forEach(task => {
         const newListItem = document.createElement('li');
-        newListItem.innerHTML = `${task.name} <i class="fas fa-trash-alt" onclick="deleteNightTask(${task.id})"></i>`;
+        newListItem.innerHTML = ` <span>${task.name}</span><i class="fas fa-trash-alt" onclick="deleteNightTask(${task.id})"></i>`;
         ordenedList.appendChild(newListItem);
     });
 }
