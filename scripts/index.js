@@ -6,16 +6,17 @@ function sendUsername() {
     const username = usernameInput.value;
 
     const inputedUsername = document.getElementById('inputed-username');
-    const newUser = inputedUsername.innerText = "Boas vindas, " + username + "!";
+    inputedUsername.innerText = "Boas vindas, " + username + "!";
 
     const bio = document.getElementById('bio');
     const inputContainer = document.getElementById('input-container');
 
-    if (newUser && newUser.length > 0) {
+    if (username.length > 0) {
         bio.style.display = 'block';
         inputContainer.style.display = 'none';
     } else {
         alert('Por favor, informe o seu nome');
+        inputedUsername.innerText = "Olá!";
     }
 }
 
