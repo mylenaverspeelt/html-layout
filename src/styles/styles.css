@@ -1,4 +1,3 @@
-
 @import url(./variables.css);
 
 /* ESTILOS GLOBAIS */
@@ -33,9 +32,19 @@ a {
     .main-section {
         width: 80%;
     }
+
+    .table-container {
+        padding: 2rem;
+    }
+
+    .day, .night {
+        padding: 2rem 3rem;
+
+    }
 }
 
 @media (max-width: 768px) {
+
     html, body {
         display: block;
         overflow-y: auto;
@@ -43,18 +52,20 @@ a {
     }
 
     .side-menu {
-        width: 100vw !important;
+        width: 100vw;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         text-align: center;
+        height: 100vh;
     }
 
     .main-section {
         width: 100vw;
+        margin-top: 4rem;
     }
 
     .side-menu p {
         font-size: 0.9rem;
-        padding: 0.8rem !important;
+        padding: 0.8rem;
     }
 
     .side-menu h2 {
@@ -62,14 +73,24 @@ a {
     }
 
     .user-img {
-        height: 5rem !important;
-        width: 5rem !important;
+        height: 5rem;
+        width: 5rem;
     }
 
     .table-container {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .menu-links {
+        font-size: 0.8rem;
+        padding: 2rem 0;
+    }
+
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb {
+        display: none;
     }
 
     h1 {
@@ -196,6 +217,10 @@ a {
 
 .main-section {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .main-section h1 {
@@ -210,15 +235,15 @@ a {
 .table-container {
     display: flex;
     background-color: var(--super-light-gray);
-    padding: 2rem;
     gap: 2rem;
     overflow: hidden;
+    padding: 0.5rem;
 }
 
 .day, .night {
     width: 100%;
     overflow: hidden;
-    padding: 2rem 3rem;
+    padding: 1rem;
     border-radius: 15px;
 }
 
@@ -243,7 +268,7 @@ a {
     cursor: pointer;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 53vh;
+    height: 60vh;
     padding: 1rem;
     margin: 0 1rem;
 }
@@ -264,6 +289,7 @@ a {
     transform: scale(1.02);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .fa-trash-alt {
     margin-left: 1rem;
