@@ -19,3 +19,4 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 - src/index.html: Página principal da aplicação.
 - src/styles/: Diretório contendo o arquivo CSS principal e variáveis.
 - src/scripts/: Diretório contendo o arquivo JavaScript para funcionalidades da aplicação.
+- src/assets/images: Diretório contendo imagens utilizadas na aplicação
