@@ -12,14 +12,14 @@
 <body>
 
     <section class="side-menu">
-        <img src="../assets/images/user-icon.png" alt="user-icon" class="user-img">
+        <img src="../assets/images/user.png" alt="user-icon" class="user-img">
         <h2 id="inputed-username"></h2>
-        <div style="display: flex; align-items: center;">
+        <div class="name-container" id="name-container">
             <input type="text" name="username" placeholder="Insira o seu nome" class="input-username"
                 id="input-username">
             <button onclick="sendUsername()" id="ok-button"><i class="fas fa-plus-circle"></i></button>
         </div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        <p id="user-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
@@ -39,32 +39,33 @@
         <h1>Lista de tarefas</h1>
         <div class="table-container">
             <div class="day">
-                <h2>Dia</h2>
+                <h2>Dia ☀️</h2>
                 <div class="new-task-container">
                     <input type="text" name="dayTask" id="new-day-task" class="new-task-input"
-                        placeholder="Adicione uma nova tarefa" maxlength="40">
+                        placeholder="Adicione uma nova tarefa" maxlength="30">
                     <button class="add-button" onclick="addDayTask()"><i class="fas fa-plus-circle"></i></button>
-                </div>
-                <nav>
-                    <ol id="day-list">
 
-                    </ol>
-                </nav>
             </div>
+            <nav>
+                <ol id="day-list">
 
-            <div class="night">
-                <h2>Noite</h2>
-                <div class="new-task-container">
-                    <input type="text" name="nightTask" id="new-night-task" class="new-task-input"
-                        placeholder="Adicione uma nova tarefa" maxlength="40">
-                    <button class="add-button" onclick="addNightTask()"><i class="fas fa-plus-circle"></i></button>
-                </div>
-                <nav>
-                    <ol id="night-list">
+                </ol>
+            </nav>
+        </div>
 
-                    </ol>
-                </nav>
+        <div class="night">
+            <h2>Noite 🌙</h2>
+            <div class="new-task-container">
+                <input type="text" name="nightTask" id="new-night-task" class="new-task-input"
+                    placeholder="Adicione uma nova tarefa" maxlength="30">
+                <button class="add-button" onclick="addNightTask()"><i class="fas fa-plus-circle"></i></button>
             </div>
+            <nav>
+                <ol id="night-list">
+
+                </ol>
+            </nav>
+        </div>
         </div>
 
     </section>

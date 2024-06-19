@@ -7,13 +7,15 @@ function sendUsername() {
     const username = usernameInput.value
 
     const inputedUsername = document.getElementById('inputed-username')
-    const newUser = inputedUsername.innerText = username
+    const newUser = inputedUsername.innerText = "Boas vindas, " + username + "!"
 
-    const okButton = document.getElementById('ok-button')
+    const userText = document.getElementById('user-text')
+
+    const nameContainer = document.getElementById('name-container')
 
     if (newUser && newUser.length > 0) {
-        usernameInput.style.display = 'none'
-        okButton.style.display = 'none'
+        userText.style.display = 'block'
+        nameContainer.style.display = 'none'
     }
     else {
         alert('Por favor, informe o seu nome')

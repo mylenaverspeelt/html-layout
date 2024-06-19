@@ -10,7 +10,7 @@
 
 html, body {
     font-family: 'Poppins', sans-serif;
-    background: var(--ice-blue);
+    background: var(--light-gray);
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -76,7 +76,7 @@ a {
     align-items: center;
     padding: 2rem;
     justify-content: center;
-    background-color: var(--light-green);
+    background-color: var(--super-light-gray);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -90,13 +90,17 @@ a {
 }
 
 .side-menu p {
-    padding: 2rem 0;
     text-align: justify;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 2rem 0;
+    display: none;
 }
 
 .user-img {
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
     margin: 1rem 0;
 }
 
@@ -115,7 +119,6 @@ a {
 
 .menu-table a {
     color: var(--dark-purple);
-
 }
 
 .menu-table a:hover {
@@ -123,15 +126,22 @@ a {
     text-decoration: underline;
 }
 
+.name-container {
+    display: flex;
+    margin-bottom: 6rem;
+    width: 100%;
+}
+
 .input-username {
-    background-color: var(--ice-blue);
+    background-color: var(--white);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     font-size: 1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     color: var(--dark-purple);
-    text-align: center;
     outline: none;
+    width: 100%;
 }
 
 #inputed-username {
@@ -139,16 +149,13 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 .input-username::placeholder {
     color: var(--dark-purple);
 }
 
-.input-username:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
-}
 
 #ok-button {
     border: none;
@@ -158,11 +165,11 @@ a {
 }
 
 #ok-button .fa-plus-circle {
-    color: var(--blue);
+    color: var(--grafite-gray);
 }
 
 #ok-button:hover .fa-plus-circle:hover {
-    color: var(--ligh-green);
+    color: var(--green);
 }
 
 #ok-button:hover {
@@ -178,15 +185,15 @@ a {
 .main-section h1 {
     font-size: 2.5rem;
     text-align: center;
-    padding-bottom: 2rem;
-    color: var(--dark-purple);
+    padding-top: 2rem;
+    color: var(--dark-gray);
+    background-color: var(--super-light-gray);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .table-container {
     display: flex;
-    background-color: var(--blue);
-    border-radius: 8px;
+    background-color: var(--super-light-gray);
     padding: 2rem;
     gap: 2rem;
     overflow: hidden;
@@ -195,51 +202,71 @@ a {
 .day, .night {
     width: 100%;
     overflow: hidden;
+    padding: 2rem 5rem;
+    border-radius: 15px;
+}
+
+.day {
+    background-color: var(--yellow);
+}
+
+.night {
+    background-color: var(--blue);
 }
 
 .day h2, .night h2 {
     text-align: center;
+    padding: 1rem;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--dark-gray);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .day ol, .night ol {
-    padding: 2rem;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
-    background-color: var(--ice-blue);
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 65vh;
+    height: 50vh;
 }
 
 .day ol li, .night ol li {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
-}
-
-.new-task-input {
-    outline: none;
-    border: none;
-    margin: 1rem 0;
-    background-color: transparent;
-    border-radius: 8px;
-    width: 100%;
+    border-radius: 15px;
     padding: 1rem;
-    color: var(--white);
-    font-size: 1rem;
-}
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    background-color: var(--super-light-gray);
 
-.new-task-input::placeholder {
-    color: var(--white);
 }
 
 .new-task-container {
     display: flex;
     align-items: center;
 }
+
+.new-task-input {
+    outline: none;
+    border: none;
+    margin: 1rem 0;
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+    color: var(--black);
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.new-task-input:focus {
+    border: 1px solid var(--blue);
+}
+
+.new-task-input::placeholder {
+    color: var(--black);
+}
+
 
 .fa-trash-alt {
     margin-left: 1rem;
@@ -249,18 +276,19 @@ a {
     border: none;
     background-color: transparent;
     display: flex;
-    padding: 1rem;
+    padding-left: 0.5rem;
     justify-content: flex-end;
 }
 
 .fa-plus-circle {
     font-size: 2rem;
-    color: var(--ice-blue);
+    color: var(--grafite-gray);
     cursor: pointer;
+    padding: 1rem;
 }
 
 .fa-plus-circle:hover {
-    color: var(--light-green);
+    color: var(--green);
 }
 
 .fa-trash-alt {
@@ -268,7 +296,7 @@ a {
 }
 
 .fa-trash-alt:hover {
-    color: red;
+    color: var(--red);
 }
 
 /* SCROLLBAR */
@@ -280,7 +308,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
