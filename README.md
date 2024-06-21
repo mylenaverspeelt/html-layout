@@ -51,11 +51,9 @@ cd html-layout
 ```
 code . 
 ```
-4. Instalar a Extensão Live Server
-Se ainda não tiver, instale a extensão Live Server no VSCode:
+4. Abra o arquivo no navegador de sua preferencia:
 
-- Abra o VSCode.
-- Vá para Extensões (Ctrl+Shift+X).
-- Pesquise por "Live Server" e instale a extensão
-- Abra o arquivo index.html no VSCode, clique com o botão direito e selecione "Open with Live Server". O projeto abrirá no seu navegador padrão.
+```
+index.html
+```
 
