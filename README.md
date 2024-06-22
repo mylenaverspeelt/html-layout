@@ -16,6 +16,7 @@ Este projeto consiste em uma aplicação simples para ajudar na organização de
 - HTML
 - CSS 
 - JavaScript
+- Font Awesome
 
 ### Estrutura do Projeto
 ```

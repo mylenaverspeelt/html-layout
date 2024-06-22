@@ -1,21 +1,21 @@
-:root {
-    /* COLORS */
-    --white: #ffffff;
-    --super-light-gray: #F4F4F2;
-    --light-gray: #E8E8E8;
-    --medium-gray: #898B8A;
-    --grafite-gray: #495464;
-    --dark-gray: #393E46;
-    --black: #080202;
-    --green: #365E32;
-    --red: #E64848;
-    --blue: #9290C3;
-    --yellow: #F9E8C9;
+    :root {
+        --white: #ffffff;
+        --super-light-gray: #F4F4F2;
+        --light-gray: #E8E8E8;
+        --medium-gray: #898B8A;
+        --grafite-gray: #495464;
+        --dark-gray: #393E46;
+        --black: #080202;
+        --green: #365E32;
+        --red: #E64848;
+        --blue: #9290C3;
+        --yellow: #F9E8C9;
+        --bg-color: #f0f0f0;
+        --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        --box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        --transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    /* FONT SIZES */
-    --font-size-base: 1rem;
-    --font-size-h1: 2.6rem;
-    --font-size-h2: 2rem;
-
-
-}
+        --font-size-base: 1rem;
+        --font-size-h1: 2.6rem;
+        --font-size-h2: 2rem;
+    }

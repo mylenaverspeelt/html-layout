@@ -16,8 +16,8 @@ html, body {
     display: flex;
     height: 100vh;
     width: 100vw;
+    background-color: var(--bg-color);
     overflow: hidden;
-    background-color: #f0f0f0;
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
     background-size: 50px 50px;
     font-size: var(--font-size-base);
@@ -65,7 +65,7 @@ a {
 
     .side-menu {
         width: 100vw;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--box-shadow);
         text-align: center;
         height: 100vh;
     }
@@ -85,6 +85,10 @@ a {
 
     #bio {
         font-size: var(--font-size-base);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 90%;
     }
 
     .table-container {
@@ -117,14 +121,14 @@ a {
     justify-content: space-around;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     background-color: var(--super-light-gray);
 }
 
 .side-menu h2 {
     padding: 1rem 0;
     font-size: var(--font-size-h2);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: var(--text-shadow);
 }
 
 .side-menu p {
@@ -147,13 +151,13 @@ a {
     padding: 1rem;
     margin: 2rem 0;
     color: var(--dark-gray);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
 }
 
 #bio:hover {
     transform: scale(1.02);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
 .menu-links {
@@ -194,7 +198,7 @@ a {
     padding: 0.5rem;
     height: 4.2rem;
     font-size: var(--font-size-base);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     outline: none;
     display: flex;
     margin: 0 1rem;
@@ -236,7 +240,7 @@ a {
     padding-top: 2rem;
     font-family: "LXGW WenKai TC", cursive;
     background-color: var(--light-gray);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: var(--text-shadow);
 }
 
 .table-container {
@@ -252,13 +256,13 @@ a {
     overflow: hidden;
     padding: 1rem;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
 }
 
 .day:hover, .night:hover {
     transform: scale(1.02);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
 .day {
@@ -275,7 +279,7 @@ a {
     font-size: var(--font-size-h2);
     font-family: "LXGW WenKai TC", cursive;
     color: var(--dark-gray);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: var(--text-shadow);
 }
 
 .day ol, .night ol {
@@ -295,10 +299,10 @@ a {
     justify-content: space-between;
     padding: 1rem;
     list-style: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     margin: 1rem 0;
     background-color: var(--white);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition);
 }
 
 .day ol li span,
@@ -312,7 +316,7 @@ a {
 .day ol li:hover,
 .night ol li:hover {
     transform: scale(1.02);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
 
